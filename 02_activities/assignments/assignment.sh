@@ -38,7 +38,17 @@ mkdir data/processed
 cd data/processed
 mkdir server_logs user_logs event_logs
 # 5. Copy all server log files (files with "server" in the name AND a .log extension) from ./data/raw to ./data/processed/server_logs
-cp "$data/raw"/*server*.log "$data/processed/server_logs"
+cp #!/bin/bash
+
+# Source and destination directories
+SOURCE_DIR="/path/to/data/raw"
+DEST_DIR="/path/to/data/processed/server_logs"
+
+
+# Copy files
+cp "$SOURCE_DIR"/*server*.log "$DEST_DIR"
+
+echo "Files copied from $SOURCE_DIR to $DEST_DIR"
 # 6. Repeat the above step for user logs and event logs
 
 # 7. For user privacy, remove all files containing IP addresses (files with "ipaddr" in the filename) from ./data/raw and ./data/processed/user_logs
