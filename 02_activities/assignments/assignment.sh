@@ -48,7 +48,7 @@ rm raw/*ipaddr*
 # 8. Create a file named ./data/inventory.txt that lists all the files in the subfolders of ./data/processed
 cd .. 
 touch data/inventory.txt
-ls -R processed > data_inventory.txt
+ls -R data/processed > inventory.txt
 ###########################################
 
 echo "Project setup is complete!"
